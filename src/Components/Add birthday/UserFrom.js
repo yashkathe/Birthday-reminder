@@ -25,9 +25,10 @@ function UserForm(props) {
         const newBday = {
             name: enteredName,
             date: new Date(enteredDate),
+            id:Math.random().toString()
         }
 
-        console.log(newBday)
+        props.saveBirthday(newBday)
     };
 
     return (

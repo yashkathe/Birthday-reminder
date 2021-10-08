@@ -1,21 +1,22 @@
 import React from "react";
 import UserForm from "./UserFrom";
 
-// import styles from "./AddUser.module.css";
-
-
 //UI import
 import Card from "../UI/Card";
 
-const submitHandler = (event) => {
-event.preventDefault()
-}
+function AddUser(props) {
+    const onSaveBirthday = (userData) => {
+        const userDataNew = {
+            ...userData
+        }
+        console.log(userDataNew)
+        // props.onAddBirthday(userDataNew)
+    }
 
-function AddUser() {
     return (
         <React.Fragment>
             <Card>
-                <UserForm/>
+                <UserForm saveBirthday={onSaveBirthday}/>
             </Card>
         </React.Fragment>
     );
