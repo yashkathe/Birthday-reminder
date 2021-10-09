@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import AddUser from './Components/Add birthday/AddUser';
 import DisplayBirthday from './Components/Display Birthday/DisplayBirthday';
 
+import styles from './App.module.css'
+
 function App() {
   const[BdayDataArray, setBayDataArray] = useState([])
 
@@ -14,6 +16,7 @@ function App() {
 
     return(
       <React.Fragment>
+        <div className={styles.backg}></div>
         <AddUser onAddBirthday={BdayDataHandler}/>
         <DisplayBirthday items={BdayDataArray}/>
       </React.Fragment>

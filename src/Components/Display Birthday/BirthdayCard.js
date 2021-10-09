@@ -9,6 +9,7 @@ const BirthdayCard = (props) => {
         <Card className={styles.indvCard}>
                 <h5>{props.name}</h5>
                 <BirthdayDate date={props.date} />
+                <button>delete</button>
         </Card>
     );
 };

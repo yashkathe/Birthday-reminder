@@ -34,7 +34,7 @@ function UserForm(props) {
     return (
         <React.Fragment>
             <form className={styles.mainCard} onSubmit={submitHandler}>
-                <div>
+                <div className={styles.title}>
                     <h3>Add a new birthday !</h3>
                 </div>
                 <div className={styles.inMainCard}>
