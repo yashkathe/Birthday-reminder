@@ -1,5 +1,5 @@
 import React from "react";
-import UserForm from "./UserFrom";
+import UserForm from "./UserForm";
 
 //UI import
 import Card from "../UI/Card";
@@ -9,8 +9,8 @@ function AddUser(props) {
         const userDataNew = {
             ...userData
         }
-        console.log(userDataNew)
-        // props.onAddBirthday(userDataNew)
+        // console.log(userDataNew)
+        props.onAddBirthday(userDataNew)
     }
 
     return (
