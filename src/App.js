@@ -14,11 +14,21 @@ function App() {
     })
   }
 
+  const deleteHandler = (deleteKey) => {
+    console.log(deleteKey)
+    const newData = BdayDataArray.filter((item) => {
+      return (
+        item.id.toString() !== deleteKey.toString()
+      )
+    })
+    setBayDataArray(newData)
+  }
+
     return(
       <React.Fragment>
         <div className={styles.backg}></div>
         <AddUser onAddBirthday={BdayDataHandler}/>
-        <DisplayBirthday items={BdayDataArray}/>
+        <DisplayBirthday items={BdayDataArray} onDelete={deleteHandler}/>
       </React.Fragment>
     )
 }

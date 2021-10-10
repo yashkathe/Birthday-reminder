@@ -47,6 +47,7 @@ function UserForm(props) {
                 </div>
                 <div className={styles.inMainCard}>
                     <label>Birth date of the subject</label>
+                    <label>month / day / year</label>
                     <input
                         type='date'
                         value={enteredDate}
