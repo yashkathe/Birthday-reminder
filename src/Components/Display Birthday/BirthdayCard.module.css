@@ -1,4 +1,4 @@
-.indvCard{
+.indvCard {
     background-color: rgb(221, 221, 221);
     width: 100%;
     display: flex;
@@ -11,23 +11,24 @@
     text-align: center;
 }
 
-.indvCard button{
-    background: rgb(169,169,169);
-	color:rgb(34, 40, 49);
-	border: 1.5px solid rgb(34, 40, 49);
+.indvCard button {
+    background: rgb(221, 221, 221);
+    color: rgb(240, 84, 84);
+    border: 2px solid rgb(240, 84, 84);
     border-radius: 6px;
-	padding: 0.5rem 1rem;
-	cursor: pointer;
-	outline: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    outline: inherit;
 }
 
 .indvCard button:hover,
-.indvCard button:active{
-    background:rgb(221, 221, 221) ;
-	color:rgb(240, 84, 84);
-	border: 2px solid rgb(240, 84, 84);
+.indvCard button:active {
+    background: rgb(169, 169, 169);
+    color: rgb(34, 40, 49);
+    border: 1.5px solid rgb(34, 40, 49);
+
     border-radius: 6px;
-	padding: 0.5rem 1rem;
-	cursor: pointer;
-	outline: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    outline: inherit;
 }
