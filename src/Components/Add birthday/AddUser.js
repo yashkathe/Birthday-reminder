@@ -14,11 +14,10 @@ function AddUser(props) {
     }
 
     return (
-        <React.Fragment>
             <Card>
                 <UserForm saveBirthday={onSaveBirthday}/>
             </Card>
-        </React.Fragment>
+
     );
 }
 

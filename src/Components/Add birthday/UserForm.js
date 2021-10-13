@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Card from "../UI/Card";
 
 import styles from "./UserForm.module.css";
 
@@ -32,7 +33,7 @@ function UserForm(props) {
     };
 
     return (
-        <React.Fragment>
+        <Card>
             <form className={styles.mainCard} onSubmit={submitHandler}>
                 <div className={styles.title}>
                     <h3>Add a new birthday !</h3>
@@ -58,7 +59,7 @@ function UserForm(props) {
                     <button>Add to list !</button>
                 </div>
             </form>
-        </React.Fragment>
+        </Card>
     );
 }
 
