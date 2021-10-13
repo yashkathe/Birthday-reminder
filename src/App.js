@@ -9,18 +9,6 @@ const App = () => {
 
     const [invalidInput, setInvalidInput] = useState(false);
 
-    // useEffect(() => {
-    //   if(localStorage.getItem('dataList') === null){
-    //     localStorage.setItem('dataList', JSON.stringify(BdayDataArray))
-    //   }
-    // },[])
-
-    useEffect(() => {
-      localStorage.setItem('dataList', JSON.stringify(BdayDataArray))
-    },
-    [BdayDataArray])
-  
-
     const BdayDataHandler = (data) => {
         if (
             data.name.trim() === "" ||
