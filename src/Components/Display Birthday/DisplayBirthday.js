@@ -8,12 +8,6 @@ import styles from "./DisplayBirthday.module.css";
 const DisplayBirthday = (props) => {
     // const currentDate = new Date()
     // const month = currentDate.toLocaleString("en-US", { month: "long" });
-
-    const renderDiv = (
-        <div className={styles.renderDiv}>
-            No birthdays stored ? Start adding !
-        </div>
-    );
     const renderDiv2 = (
         <div className={styles.renderDiv}>No birthdays stored this month </div>
     );

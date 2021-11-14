@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AddUser from "./Components/Add birthday/AddUser";
 import DisplayBirthday from "./Components/Display Birthday/DisplayBirthday";
 import ErrorModal from "./Components/Add birthday/ErrorModal";
 
 const App = () => {
     const [BdayDataArray, setBayDataArray] = useState([]);
-
-
-    useEffect(() => {
-        localStorage.setItem("DataDB", JSON.stringify(BdayDataArray));
-    }, [BdayDataArray]);
 
     const [invalidInput, setInvalidInput] = useState(false);
 
