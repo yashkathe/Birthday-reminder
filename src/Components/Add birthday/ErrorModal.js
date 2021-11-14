@@ -2,10 +2,9 @@ import React from "react";
 import Card from "../UI/Card";
 import Modal from "../UI/Modal";
 
-import styles from './ErrorModal.module.css'
+import styles from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
-    
     return (
         <Card>
             <Modal onClose={props.onCloseHandle}>

@@ -25,3 +25,11 @@
     align-items: center;
     justify-content: center;
 }
+
+.renderDiv{
+    color: white;
+    text-align: center;
+    margin-top: 1rem ;
+    padding: 1.5rem 1.5rem;
+    font-size: 22px;
+}

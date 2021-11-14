@@ -9,6 +9,15 @@ const DisplayBirthday = (props) => {
     // const currentDate = new Date()
     // const month = currentDate.toLocaleString("en-US", { month: "long" });
 
+    const renderDiv = (
+        <div className={styles.renderDiv}>
+            No birthdays stored ? Start adding !
+        </div>
+    );
+    const renderDiv2 = (
+        <div className={styles.renderDiv}>No birthdays stored this month </div>
+    );
+
     const [filteredMonth, setFilteredMonth] = useState("default");
 
     const filterChangeHandler = (selectedMonth) => {
@@ -25,8 +34,8 @@ const DisplayBirthday = (props) => {
     });
 
     const deleteHandler = (deleteKey) => {
-        props.onDelete(deleteKey)
-    }
+        props.onDelete(deleteKey);
+    };
 
     return (
         <Card className={styles.mainCard}>
@@ -48,8 +57,11 @@ const DisplayBirthday = (props) => {
                               date={item.date}
                               key={item.id}
                               key2={item.id}
-                              onDelete={deleteHandler}                          />
+                              onDelete={deleteHandler}
+                          />
                       ))
+                    : filteredMontharray.length === 0
+                    ? renderDiv2
                     : filteredMontharray.map((item) => (
                           <BirthdayCard
                               name={item.name}

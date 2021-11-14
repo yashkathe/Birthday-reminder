@@ -29,6 +29,9 @@ function UserForm(props) {
             id:Math.random().toString()
         }
 
+        setEnteredName('')
+        setEnteredDate('')
+
         props.saveBirthday(newBday)
     };
 

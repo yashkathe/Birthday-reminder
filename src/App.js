@@ -4,8 +4,12 @@ import DisplayBirthday from "./Components/Display Birthday/DisplayBirthday";
 import ErrorModal from "./Components/Add birthday/ErrorModal";
 
 const App = () => {
-
     const [BdayDataArray, setBayDataArray] = useState([]);
+
+
+    useEffect(() => {
+        localStorage.setItem("DataDB", JSON.stringify(BdayDataArray));
+    }, [BdayDataArray]);
 
     const [invalidInput, setInvalidInput] = useState(false);
 
@@ -17,6 +21,7 @@ const App = () => {
             setInvalidInput(true);
         } else {
             setBayDataArray((prevData) => {
+                console.log(prevData);
                 return [...prevData, data];
             });
         }
@@ -38,7 +43,10 @@ const App = () => {
         <React.Fragment>
             <AddUser onAddBirthday={BdayDataHandler} />
             {invalidInput ? (
-                <ErrorModal onCloseHandle={backdropHandler} onClick={backdropHandler}/>
+                <ErrorModal
+                    onCloseHandle={backdropHandler}
+                    onClick={backdropHandler}
+                />
             ) : (
                 <DisplayBirthday
                     items={BdayDataArray}
@@ -47,6 +55,6 @@ const App = () => {
             )}
         </React.Fragment>
     );
-}
+};
 
 export default App;
